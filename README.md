@@ -43,7 +43,6 @@ Before you begin, ensure you have the following installed and configured:
     langchain-core
     langchain-community
     twilio
-    gunicorn
     ```
     Then run:
     ```bash
@@ -64,15 +63,14 @@ Before you begin, ensure you have the following installed and configured:
 ## Running the Application
 
 1.  **Start the Flask application:**
-    ```bash
-    gunicorn app:app
+    ```python3 app.py
     ```
-    The application will start on `http://127.0.0.1:8000`.
+    The application will start on `http://127.0.0.1:5000`.
 
 2.  **Expose your local server to the internet using ngrok:**
     Open a new terminal and run:
     ```bash
-    ngrok http 8000
+    ngrok http 5000
     ```
     ngrok will provide you with a public URL (e.g., `https://<unique-id>.ngrok.io`). Copy this URL.
 
