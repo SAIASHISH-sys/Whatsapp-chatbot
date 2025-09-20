@@ -110,31 +110,6 @@ def webhook():
         resp = MessagingResponse()
         resp.message("Oops! Something went wrong. Please try again later. 🛠️")
         return str(resp)
-'''
-@app.route('/clear_memory/<user_id>', methods=['POST'])
-def clear_user_memory(user_id):
-    """
-    Clear conversation memory for a specific user (useful for testing)
-    """
-    if user_id in message_histories:
-        del message_histories[user_id]
-        logger.info(f"Memory cleared for user {user_id}")
-        return {'message': f'Memory cleared for user {user_id}'}, 200
-    else:
-        logger.warning(f"Attempted to clear memory for non-existent user: {user_id}")
-        return {'message': f'No memory found for user {user_id}'}, 404
-    
-@app.route('/health', methods=['GET'])
-def health_check():
-    """
-    Health check endpoint
-    """
-    return {
-            'status': 'healthy',
-            'model': 'gemini-2.0-flash-exp',
-            'framework': 'langchain',
-            'active_conversations': len(user_conversation)
-        }, 200'''
 
 @app.route('/',methods =['GET'])
 def home():
