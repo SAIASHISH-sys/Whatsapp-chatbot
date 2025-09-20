@@ -63,8 +63,10 @@ Before you begin, ensure you have the following installed and configured:
 ## Running the Application
 
 1.  **Start the Flask application:**
-    ```python3 app.py
     ```
+    python3 app.py
+    ```
+    
     The application will start on `http://127.0.0.1:5000`.
 
 2.  **Expose your local server to the internet using ngrok:**
